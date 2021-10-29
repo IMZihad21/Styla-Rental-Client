@@ -3,7 +3,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div className="flex justify-between md:px-20 py-2">
+        <div className="flex justify-between px-2 md:px-20 py-2">
             <div className="h-14 my-auto my-auto bg-gray-400 rounded-xl">
                 <Link to='/'>
                     <img className="w-full h-full" src="https://i.ibb.co/q00fs5n/stylarentallogo.png" alt="logo" />
