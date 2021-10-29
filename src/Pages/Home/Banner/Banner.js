@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const Banner = () => {
     return (
-        <div className='mx-2 md:mx-16 mt-4'>
+        <div>
             <Carousel
                 animationHandler="fade"
                 autoPlay={true}
