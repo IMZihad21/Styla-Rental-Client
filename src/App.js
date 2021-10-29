@@ -6,7 +6,7 @@ import RentDress from './Pages/Dress/RentDress/RentDress';
 import Home from './Pages/Home/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import AllOrders from './Pages/Orders/AllOrders/AllOrders';
-import Footer from './Pages/Shared/Footer/Footer/Footer';
+import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header/Header';
 import Navbar from './Pages/Shared/Header/Navbar/Navbar';
 
