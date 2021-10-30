@@ -1,6 +1,8 @@
 import React from 'react';
+import useProvider from '../../Hooks/useProvider';
 
 const Authorization = () => {
+    console.log(useProvider())
     return (
         <div className="bg-gray-100">
             <div className="w-9/12 m-auto py-16 min-h-screen flex items-center justify-center">
