@@ -5,29 +5,29 @@ const GetInTouch = () => {
     return (
         <div className='md:flex md:my-5 p-5 rounded-xl bg-gray-100'>
             <div className='md:w-1/2'>
-                <div className='my-16 text-left pl-5 py-2'>
+                <div className='my-2 text-left pl-5'>
                     <p className='text-yellow-500 text-xl'>Our Contacts</p>
-                    <h1 className='text-5xl font-semibold mt-4'>Get In Touch With Us</h1>
+                    <h1 className='text-5xl font-semibold'>Get In Touch With Us</h1>
                 </div>
-                <div className='grid grid-cols-2 gap-4 p-2 text-left'>
-                    <div>
+                <div className='grid grid-cols-2 gap-4 p-2 text-center'>
+                    <div className='bg-yellow-100 rounded-xl p-2'>
                         <i className="text-yellow-500 text-2xl p-3 fas fa-search-location"></i>
-                        <span className='text-xl leading-none'>KA-244, Kuril, <br /> Progoti Shoroni, Dhaka</span>
+                        <h1 className='text-md font-bold'>KA-244, Kuril, Progoti Shoroni, Dhaka</h1>
                         <p>Try on Our dresses in our showroom</p>
                     </div>
-                    <div>
+                    <div className='bg-yellow-100 rounded-xl p-2'>
                         <i className="text-yellow-500 text-2xl p-3 fas fa-phone"></i>
-                        <span className='text-xl'>09 39473297</span>
+                        <h1 className='text-md font-bold'>09 39473297</h1>
                         <p>Contact Us by Phone</p>
                     </div>
-                    <div>
+                    <div className='bg-yellow-100 rounded-xl p-2'>
                         <i className="text-yellow-500 text-2xl p-3 fas fa-envelope-square"></i>
-                        <span className='text-xl'>stylarental@gmail.com</span>
+                        <h1 className='text-md font-bold'>stylarental@gmail.com</h1>
                         <p>Contact Us by Email</p>
                     </div>
-                    <div>
+                    <div className='bg-yellow-100 rounded-xl p-2'>
                         <i className="text-yellow-500 text-2xl p-3 fab fa-instagram"></i>
-                        <span className='text-xl'>@StylaRentalService</span>
+                        <h1 className='text-md font-bold'>@StylaRentalService</h1>
                         <p>Check our instagram</p>
                     </div>
                 </div>
