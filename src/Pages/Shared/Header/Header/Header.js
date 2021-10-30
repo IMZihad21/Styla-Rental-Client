@@ -2,6 +2,7 @@ import { Link as NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import useProvider from '../../../../Hooks/useProvider';
+import Cart from '../Cart/Cart';
 
 Modal.setAppElement("#root");
 
@@ -60,7 +61,7 @@ const Header = () => {
                     style={modalStyle}
                 >
                     <div className="rounded p-10">
-                        {/* This is cart Placeholder */}
+                        <Cart/>
                     </div>
                 </Modal>
                 <button>

@@ -9,6 +9,7 @@ import AllOrders from './Pages/Orders/AllOrders/AllOrders';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header/Header';
 import Navbar from './Pages/Shared/Header/Navbar/Navbar';
+import PrivateRoute from './Utilities/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -19,9 +20,15 @@ function App() {
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/authorization" component={Authorization} />
-          <Route path="/dress/rent" component={RentDress} />
-          <Route path="/dress/find" component={FindDress} />
-          <Route path="/orders/all" component={AllOrders} />
+          <PrivateRoute path="/dress/rent">
+            <RentDress />
+          </PrivateRoute>
+          <PrivateRoute path="/dress/find">
+            <FindDress />
+          </PrivateRoute>
+          <PrivateRoute path="/orders/all">
+            <AllOrders />
+          </PrivateRoute>
           <Route path="*" component={NotFound} />
         </Switch>
         <Footer />
