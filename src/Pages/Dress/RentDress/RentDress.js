@@ -19,6 +19,7 @@ const RentDress = () => {
         }
         // Modifying data before making POST request
         data.owner = user.email;
+        data.ownerName = user.displayName;
         data.price = parseInt(price);
         data.rating = parseInt(rating);
 

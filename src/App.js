@@ -11,6 +11,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header/Header';
 import Navbar from './Pages/Shared/Header/Navbar/Navbar';
 import PrivateRoute from './Utilities/PrivateRoute/PrivateRoute';
+import DressDetails from './Pages/Dress/DressDetails/DressDetails';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/dress/find">
             <FindDress />
+          </PrivateRoute>
+          <PrivateRoute path="/dress/:dressID">
+            <DressDetails />
           </PrivateRoute>
           <PrivateRoute path="/orders/all">
             <AllOrders />
