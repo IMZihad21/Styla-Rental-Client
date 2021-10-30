@@ -6,7 +6,7 @@ const Footer = () => {
         <div>
             <div className='bg-gray-800 text-white grid grid-cols-4 gap-4 md:p-16'>
                 <div>
-                    <h1 className='font-semibold text-3xl text-left text-yellow-500 py-3'>Hire Dresses</h1>
+                    <h1 className='font-semibold text-3xl text-left text-green-500 py-3'>Hire Dresses</h1>
                     <div className='text-left pl-2'>
                         <Link className='block' to="/dummy">Evening Dress</Link>
                         <Link className='block' to="/dummy">Prom Dress</Link>
@@ -16,7 +16,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <h1 className='font-semibold text-3xl text-left text-yellow-500 py-3'>Customer Care</h1>
+                    <h1 className='font-semibold text-3xl text-left text-green-500 py-3'>Customer Care</h1>
                     <div className='text-left pl-2'>
                         <Link className='block' to="/dummy">Contact Us</Link>
                         <Link className='block' to="/dummy">How it Works</Link>
@@ -26,7 +26,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <h1 className='font-semibold text-3xl text-left text-yellow-500 py-3'>About Us</h1>
+                    <h1 className='font-semibold text-3xl text-left text-green-500 py-3'>About Us</h1>
                     <div className='text-left pl-2'>
                         <Link className='block' to="/dummy">About Us</Link>
                         <Link className='block' to="/dummy">We're Hiring</Link>
@@ -35,7 +35,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <h1 className='font-semibold text-3xl text-left text-yellow-500 py-3'>Stay Connected</h1>
+                    <h1 className='font-semibold text-3xl text-left text-green-500 py-3'>Stay Connected</h1>
                     <div className='text-left pl-2 pt-2 text-4xl space-x-3'>
                         <Link to="/dummy"><i className="fab fa-facebook"></i></Link>
                         <Link to="/dummy"><i className="fab fa-twitter"></i></Link>
