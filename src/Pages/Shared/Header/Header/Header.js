@@ -1,5 +1,4 @@
-import { Link as NavLink } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { Link as NavLink, useHistory } from 'react-router-dom';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import useProvider from '../../../../Hooks/useProvider';
@@ -8,35 +7,14 @@ import Cart from '../Cart/Cart';
 Modal.setAppElement("#root");
 
 const Header = () => {
-    const { user, logOut, cart, setCart } = useProvider();
+    const { user, logOut, } = useProvider();
     const [ cartOpen, setCartOpen ] = useState(false);
+    const history = useHistory();
     const toggleCartModal = () => setCartOpen(!cartOpen);
-    const handleCheckOut = () => {
-        if (cart.length > 0) {
-            setCart([]);
-            toast.success("Succesfully added your dress to our collection. Thanks for using our service", {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-            });
-        }
-        else {
-
-            toast.error("Your cart is empty!", {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-            });
-        }
-    }
+    const handleCheckout = () => {
+        setCartOpen(false);
+        history.push('/orders/checkout')
+    };
     const modalStyle = {
         content: {
             top: '10%',
@@ -86,18 +64,7 @@ const Header = () => {
                     style={modalStyle}
                 >
                     <div className='flex justify-between'>
-                        <button className='px-10 py-3 my-auto text-white font-bold bg-green-500  hover:bg-red-500 rounded' onClick={handleCheckOut}>Check Out</button>
-                        <ToastContainer
-                            position="top-right"
-                            autoClose={5000}
-                            hideProgressBar={false}
-                            newestOnTop
-                            closeOnClick
-                            rtl={false}
-                            pauseOnFocusLoss
-                            draggable
-                            pauseOnHover
-                        />
+                        <button className='px-10 py-3 my-auto text-white font-bold bg-green-500  hover:bg-red-500 rounded' onClick={handleCheckout}>Check Out</button>
                         <button className='px-10 py-3 my-auto text-white font-bold bg-green-500  hover:bg-red-500 rounded' onClick={toggleCartModal}>Close</button>
                     </div>
                     <Cart />
