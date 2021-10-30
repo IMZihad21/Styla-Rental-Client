@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import axios from 'axios';
+import Loading from '../../Shared/Loading/Loading';
 
 const Banner = () => {
     const [ banner, setBanner ] = useState([]);
@@ -22,9 +23,11 @@ const Banner = () => {
                 showThumbs={false}
             >
                 {
-                    banner.map(banner => <div key={banner._id}>
-                        <img className='rounded-xl w-full h-full' src={banner.url} alt='bannerImage' />
-                    </div>)
+                    banner.length > 0 ?
+                        banner.map(banner => <div key={banner._id}>
+                            <img className='rounded-xl w-full h-full' src={banner.url} alt='bannerImage' />
+                        </div>) :
+                        <Loading />
                 }
             </Carousel>
         </div>

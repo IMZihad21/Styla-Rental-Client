@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import DressCard from '../../Dress/DressCard/DressCard';
 import axios from 'axios'
+import Loading from '../../Shared/Loading/Loading';
 
 const TopDress = () => {
     const [ dresses, setDresses ] = useState([]);
@@ -10,7 +11,12 @@ const TopDress = () => {
     useEffect(() => {
         axios.get('http://localhost:9000/dresses')
             .then((response) => {
-                setDresses(response.data);
+                const data = response.data;
+                if (data.length > 6) {
+                    const slicedData = data.slice(0, 6);
+                    setDresses(slicedData);
+                }
+                setDresses(data);
             }).catch((err) => {
                 console.log(err);
             });
@@ -30,7 +36,9 @@ const TopDress = () => {
             </div>
             <div className='grid grid-cols-4 gap-4'>
                 {
-                    dresses.map(dress => <DressCard key={dress._id} dress={dress} />)
+                    dresses.length > 0 ?
+                        dresses.map(dress => <DressCard key={dress._id} dress={dress} />) :
+                        <Loading />
                 }
             </div>
         </div>
