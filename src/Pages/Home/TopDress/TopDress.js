@@ -17,9 +17,7 @@ const TopDress = () => {
                     setDresses(slicedData);
                 }
                 setDresses(data);
-            }).catch((err) => {
-                console.log(err);
-            });
+            })
     }, [])
     return (
         <div className='my-5'>

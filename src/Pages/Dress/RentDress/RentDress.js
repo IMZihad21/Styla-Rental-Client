@@ -99,8 +99,6 @@ const RentDress = () => {
                     />
                 </div>
             </div>
-
-
         </div>
     );
 };
