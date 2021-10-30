@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.min.css'
 import Authorization from './Pages/Authorization/Authorization/Authorization';
 import FindDress from './Pages/Dress/FindDress/FindDress';
 import RentDress from './Pages/Dress/RentDress/RentDress';

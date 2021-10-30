@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import DressCard from '../../Dress/DressCard/DressCard';
+import axios from 'axios'
 
 const TopDress = () => {
+    const [ dresses, setDresses ] = useState([]);
+
+    //Call GET API to get dress collections
+    useEffect(() => {
+        axios.get('http://localhost:9000/dresses')
+            .then((response) => {
+                setDresses(response.data);
+            }).catch((err) => {
+                console.log(err);
+            });
+    }, [])
     return (
         <div className='my-5'>
             <div className='md:flex justify-between'>
@@ -17,7 +29,9 @@ const TopDress = () => {
                 </div>
             </div>
             <div className='grid grid-cols-4 gap-4'>
-                <DressCard />
+                {
+                    dresses.map(dress => <DressCard key={dress._id} dress={dress} />)
+                }
             </div>
         </div>
     );

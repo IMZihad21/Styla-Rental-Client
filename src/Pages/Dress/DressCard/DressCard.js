@@ -1,16 +1,18 @@
 import React from 'react';
 import { RatingView } from 'react-simple-star-rating';
 
-const DressCard = () => {
+const DressCard = ({ dress }) => {
+    const { name, image, price, rating } = dress;
     return (
         <div className='bg-gray-100 rounded-xl p-4'>
-            <div className='w-60 mx-auto'>
-                <img className='w-full h-full rounded-xl' src="https://unsplash.com/photos/gsKdPcIyeGg/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8ZHJlc3N8fDB8MXx8fDE2MzU0ODkzNTc&force=true&w=640" alt="DressImage" />
+            <div className='w-60 h-80 mx-auto'>
+                <img className='w-full h-full rounded-xl' src={image} alt={name} />
             </div>
             <div>
-                <h1>{ }</h1> {/* Dress Name */}
-                <RatingView ratingValue={2} /> {/* Dress Rating */}
-                <p>Price: <span>${ }</span></p> {/* Dress Price */}
+                <h1 className='text-2xl text-red-500 my-2 font-semibold'>{name}</h1> {/* Dress Name */}
+                <RatingView ratingValue={rating} /> {/* Dress Rating */}
+                <p className='font-semibold'>Rent this Dress for <span className='font-bold text-red-500'>${price}</span></p> {/* Dress Price */}
+                <button className='px-10 py-2 my-3 text-white font-bold bg-yellow-500 hover:bg-red-500 rounded-xl'>Rent this dress</button>
             </div>
         </div>
     );

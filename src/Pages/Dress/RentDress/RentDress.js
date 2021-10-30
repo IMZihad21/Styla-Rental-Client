@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
 import { useForm } from "react-hook-form";
 import useProvider from '../../../Hooks/useProvider';
 
@@ -24,12 +25,28 @@ const RentDress = () => {
         // Make POST req to backend
         axios.post('http://localhost:9000/dresses', data)
             .then((response) => {
-                if(response.data?.acknowledged){
-                    alert("Succesfully added your dress to our collection. Thanks for using our service");
+                if (response.data?.acknowledged) {
+                    toast.success("Succesfully added your dress to our collection. Thanks for using our service", {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                    });
                     reset();
                 }
             }).catch((err) => {
-                alert(err)
+                toast.error(err, {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
             });
     }
     return (
@@ -68,6 +85,17 @@ const RentDress = () => {
                         }
                         <button type="submit" className="text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Submit</button>
                     </form>
+                    <ToastContainer
+                        position="top-right"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                    />
                 </div>
             </div>
 
