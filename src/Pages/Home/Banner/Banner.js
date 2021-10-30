@@ -4,11 +4,11 @@ import { Carousel } from 'react-responsive-carousel';
 import axios from 'axios';
 
 const Banner = () => {
-    const [ bannerIMG, setBannerIMG ] = useState([]);
+    const [ banner, setBanner ] = useState([]);
     useEffect(() => {
         axios.get('http://localhost:9000/banner')
             .then(response => {
-                setBannerIMG(response.data)
+                setBanner(response.data)
             })
     }, [])
     return (
@@ -22,7 +22,7 @@ const Banner = () => {
                 showThumbs={false}
             >
                 {
-                    bannerIMG.map(banner => <div key={banner._id}>
+                    banner.map(banner => <div key={banner._id}>
                         <img className='rounded-xl w-full h-full' src={banner.url} alt='bannerImage' />
                     </div>)
                 }
