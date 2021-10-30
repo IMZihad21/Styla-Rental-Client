@@ -21,12 +21,12 @@ const GetInTouch = () => {
                         <p>Contact Us by Phone</p>
                     </div>
                     <div>
-                        <i class="text-yellow-500 text-2xl p-3 fas fa-envelope-square"></i>
+                        <i className="text-yellow-500 text-2xl p-3 fas fa-envelope-square"></i>
                         <span className='text-xl'>stylarental@gmail.com</span>
                         <p>Contact Us by Email</p>
                     </div>
                     <div>
-                        <i class="text-yellow-500 text-2xl p-3 fab fa-instagram"></i>
+                        <i className="text-yellow-500 text-2xl p-3 fab fa-instagram"></i>
                         <span className='text-xl'>@StylaRentalService</span>
                         <p>Check our instagram</p>
                     </div>

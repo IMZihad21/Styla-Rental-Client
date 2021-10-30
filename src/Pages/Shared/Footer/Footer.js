@@ -37,11 +37,11 @@ const Footer = () => {
                 <div>
                     <h1 className='font-semibold text-3xl text-left text-yellow-500 py-3'>Stay Connected</h1>
                     <div className='text-left pl-2 pt-2 text-4xl space-x-3'>
-                        <Link to="/dummy"><i class="fab fa-facebook"></i></Link>
-                        <Link to="/dummy"><i class="fab fa-twitter"></i></Link>
-                        <Link to="/dummy"><i class="fab fa-instagram"></i></Link>
-                        <Link to="/dummy"><i class="fab fa-pinterest"></i></Link>
-                        <Link to="/dummy"><i class="fab fa-youtube"></i></Link>
+                        <Link to="/dummy"><i className="fab fa-facebook"></i></Link>
+                        <Link to="/dummy"><i className="fab fa-twitter"></i></Link>
+                        <Link to="/dummy"><i className="fab fa-instagram"></i></Link>
+                        <Link to="/dummy"><i className="fab fa-pinterest"></i></Link>
+                        <Link to="/dummy"><i className="fab fa-youtube"></i></Link>
                     </div>
                 </div>
             </div>
