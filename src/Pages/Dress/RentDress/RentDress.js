@@ -62,7 +62,7 @@ const RentDress = () => {
                                 <option value={5}>5</option>
                             </select>
                         </div>
-                        <p className="my-5 text-xl font-semibold">You are submitting as: <span className='text-yellow-500'>{user.email}</span></p>
+                        <p className="my-5 text-xl font-semibold">You are submitting as: <span className='text-yellow-500'>{user.displayName} ({user.email})</span></p>
                         {
                             inputError && <p className="my-5 text-red-500 text-xl font-semibold">* All field must be filled before Submit</p>
                         }
