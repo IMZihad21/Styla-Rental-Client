@@ -6,7 +6,7 @@ const GetInTouch = () => {
         <div className='md:flex md:my-5 p-5 rounded-xl bg-gray-100'>
             <div className='md:w-1/2'>
                 <div className='my-16 text-left pl-5 py-2'>
-                    <p className='text-red-300 text-xl'>------ Our Contacts</p>
+                    <p className='text-yellow-500 text-xl'>Our Contacts</p>
                     <h1 className='text-5xl font-semibold mt-4'>Get In Touch With Us</h1>
                 </div>
                 <div className='grid grid-cols-2 gap-4 p-2 text-left'>

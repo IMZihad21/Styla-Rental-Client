@@ -28,7 +28,7 @@ const Header = () => {
             <div className="flex">
                 <div className="my-auto">
                     <Link to='/authorization'>
-                        <button className="px-10 py-3 my-auto bg-red-200 rounded-xl">Sign In</button>
+                        <button className="px-10 py-3 my-auto bg-yellow-500 rounded-xl">Sign In</button>
                     </Link>
                 </div>
                 <button onClick={toggleCartModal}>
