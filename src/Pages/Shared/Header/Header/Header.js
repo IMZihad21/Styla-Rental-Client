@@ -62,7 +62,7 @@ const Header = () => {
                             </NavLink>)
                     }
                 </div>
-                <div>
+                <div className='my-auto'>
                     <button onClick={toggleCartModal}>
                         <i className="fas fa-shopping-cart my-auto text-4xl pl-4 text-gray-500 hover:text-red-500"></i>
                     </button>
