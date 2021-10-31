@@ -8,8 +8,11 @@ const Cart = () => {
         totalRent += dress.price;
     }
     const handleRemoveFromCart = dress => {
-        const newCart = cart.filter(element => element !== dress)
-        setCart(newCart);
+        if (window.confirm("Do you really want to remove this?")) {
+            const newCart = cart.filter(element => element !== dress)
+            setCart(newCart);
+        }
+
     };
     return (
         <div className="text-center">

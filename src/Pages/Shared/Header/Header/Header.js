@@ -49,7 +49,7 @@ const Header = () => {
                                 </button>
                             </div>) :
                             (<NavLink to='/authorization'>
-                                <button className="px-10 py-3 my-auto text-white font-bold bg-green-500  hover:text-red-500 rounded-xl">
+                                <button className="px-10 py-3 my-auto text-white font-bold bg-green-500  hover:bg-red-500 rounded-xl">
                                     Sign In
                                 </button>
                             </NavLink>)

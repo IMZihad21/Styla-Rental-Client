@@ -9,11 +9,9 @@ const useCart = () => {
     useEffect(() => {
         axios.get(`http://localhost:9000/cart/${userID}`)
             .then((response) => {
-                if (response.data.length > 0) {
-                    setCart(response.data);
-                }
+                setCart(response.data);
             })
-    }, [ userID ])
+    }, [ user ])
 
     useEffect(() => {
         if (userID) {
