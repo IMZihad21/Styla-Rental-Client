@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import useProvider from '../../../../Hooks/useProvider';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const Cart = () => {
     const { user, cart, order, setCart, setOrder } = useProvider();
@@ -28,7 +28,7 @@ const Cart = () => {
             return;
         }
         const pendingOrder = cart.map(dress => {
-            return { ...dress, ...data }
+            return { ...dress, ...data, pending: true }
         })
         setOrder([ ...order, ...pendingOrder ]);
 
@@ -102,17 +102,6 @@ const Cart = () => {
                                 }
                                 <button type="submit" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Checkout</button>
                             </form>
-                            <ToastContainer
-                                position="top-right"
-                                autoClose={5000}
-                                hideProgressBar={false}
-                                newestOnTop
-                                closeOnClick
-                                rtl={false}
-                                pauseOnFocusLoss
-                                draggable
-                                pauseOnHover
-                            />
                         </div>
                     </div>
             }

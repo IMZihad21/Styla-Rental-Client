@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import useProvider from '../../../../Hooks/useProvider';
 import Cart from '../Cart/Cart';
+import { ToastContainer } from 'react-toastify'
 
 Modal.setAppElement("#root");
 
@@ -25,6 +26,17 @@ const Header = () => {
                 <NavLink to='/'>
                     <img className="w-full h-full" src="https://i.ibb.co/q00fs5n/stylarentallogo.png" alt="logo" />
                 </NavLink>
+                <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
             </div>
             <div className="flex">
                 <div className="my-auto">

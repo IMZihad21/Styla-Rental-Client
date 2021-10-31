@@ -4,11 +4,11 @@ import useFirebase from "./useFirebase";
 
 const useCart = () => {
     const { user } = useFirebase();
-    const userID = user.uid;
+    const userID = user.email;
     const [ cart, setCart ] = useState([]);
     const [ order, setOrder ] = useState([]);
     useEffect(() => {
-        axios.get(`https://styla-rental.herokuapp.com/cart/${userID}`)
+        axios.get(`http://localhost:9000/cart/${userID}`)
             .then((response) => {
                 const { cart, order } = response.data;
                 if (cart) {
@@ -29,7 +29,7 @@ const useCart = () => {
     useEffect(() => {
         if (userID) {
             const data = { userID, cart, order }
-            axios.put('https://styla-rental.herokuapp.com/cart', data)
+            axios.put('http://localhost:9000/cart', data)
                 .then((response) => {
                     // do nothing cuz yes XD
                 })

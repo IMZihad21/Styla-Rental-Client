@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useForm } from "react-hook-form";
 import useProvider from '../../../Hooks/useProvider';
 
@@ -24,7 +24,7 @@ const RentDress = () => {
         data.rating = parseInt(rating);
 
         // Make POST req to backend
-        axios.post('https://styla-rental.herokuapp.com/dresses', data)
+        axios.post('http://localhost:9000/dresses', data)
             .then((response) => {
                 if (response.data?.acknowledged) {
                     toast.success("Succesfully added your dress to our collection. Thanks for using our service", {
@@ -85,17 +85,6 @@ const RentDress = () => {
                         }
                         <button type="submit" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Submit</button>
                     </form>
-                    <ToastContainer
-                        position="top-right"
-                        autoClose={5000}
-                        hideProgressBar={false}
-                        newestOnTop
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                    />
                 </div>
             </div>
         </div>

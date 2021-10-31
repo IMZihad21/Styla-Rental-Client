@@ -8,7 +8,7 @@ const FindDress = () => {
 
     //Call GET API to get dress collections
     useEffect(() => {
-        axios.get('https://styla-rental.herokuapp.com/dresses')
+        axios.get('http://localhost:9000/dresses')
             .then((response) => {
                 setDresses(response.data)
             });

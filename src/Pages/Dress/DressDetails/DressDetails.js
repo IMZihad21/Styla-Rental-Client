@@ -3,14 +3,14 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import { RatingView } from 'react-simple-star-rating';
 import useProvider from '../../../Hooks/useProvider';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const DressDetails = () => {
     const [ dress, setDress ] = useState({});
     const { dressID } = useParams();
     const { user, cart, setCart } = useProvider();
     useEffect(() => {
-        axios.get(`https://styla-rental.herokuapp.com/dress/${dressID}`)
+        axios.get(`http://localhost:9000/dress/${dressID}`)
             .then((response) => {
                 setDress(response.data);
             })
@@ -56,17 +56,6 @@ const DressDetails = () => {
                 <RatingView ratingValue={dress.rating} />
                 <p className='font-semibold'>Rent this Dress for <span className='font-bold text-red-500'>${dress.price}</span></p>
                 <button onClick={handleAddToCart} className='px-10 py-2 my-3 text-white font-bold bg-green-500 hover:bg-red-500 rounded-xl'>Rent this dress</button>
-                <ToastContainer
-                    position="top-right"
-                    autoClose={5000}
-                    hideProgressBar
-                    newestOnTop
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                />
             </div>
         </div>
     );
