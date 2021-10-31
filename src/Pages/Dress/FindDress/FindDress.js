@@ -17,7 +17,7 @@ const FindDress = () => {
         <div className='mx-2 md:mx-16 mt-4'>
             <div className="bg-green--100">
                 <div className="border-t border-green--200 text-center m-2">
-                    <h1 className="text-5xl font-bold text-green-500">Find your best dress from all collections</h1>
+                    <h1 className="text-5xl font-bold text-gray-500">Find your best dress from all collections</h1>
                     <div className='grid grid-cols-4 gap-4 py-8'>
                         {
                             dresses.length > 0 ?

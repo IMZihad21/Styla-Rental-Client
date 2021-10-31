@@ -50,7 +50,7 @@ const DressDetails = () => {
             </div>
             <div className='w-1/2 my-auto text-left'>
                 <h1 className='text-2xl my-2 font-semibold'>This amazing dress is named <span className='text-red-500 text-3xl font-bold'>{dress.name}</span></h1>
-                <p className='text-lg my-2'>Posted by <span className='text-green-500 font-bold'>{
+                <p className='text-lg my-2'>Posted by <span className='text-gray-500 font-bold'>{
                     user.displayName ?
                         `${user.displayName} (${user.email})` :
                         user.email

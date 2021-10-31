@@ -12,7 +12,6 @@ import Header from './Pages/Shared/Header/Header/Header';
 import Navbar from './Pages/Shared/Header/Navbar/Navbar';
 import PrivateRoute from './Utilities/PrivateRoute/PrivateRoute';
 import DressDetails from './Pages/Dress/DressDetails/DressDetails';
-import PlaceOrder from './Pages/Orders/PlaceOrder/PlaceOrder';
 
 function App() {
   return (
@@ -31,9 +30,6 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/dress/:dressID">
             <DressDetails />
-          </PrivateRoute>
-          <PrivateRoute path="/orders/checkout">
-            <PlaceOrder />
           </PrivateRoute>
           <PrivateRoute path="/orders/all">
             <AllOrders />

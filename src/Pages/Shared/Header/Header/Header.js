@@ -1,4 +1,4 @@
-import { Link as NavLink, useHistory } from 'react-router-dom';
+import { Link as NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import useProvider from '../../../../Hooks/useProvider';
@@ -9,12 +9,7 @@ Modal.setAppElement("#root");
 const Header = () => {
     const { user, logOut, } = useProvider();
     const [ cartOpen, setCartOpen ] = useState(false);
-    const history = useHistory();
     const toggleCartModal = () => setCartOpen(!cartOpen);
-    const handleCheckout = () => {
-        setCartOpen(false);
-        history.push('/orders/checkout')
-    };
     const modalStyle = {
         content: {
             top: '10%',
@@ -56,7 +51,7 @@ const Header = () => {
                     }
                 </div>
                 <button onClick={toggleCartModal}>
-                    <i className="fas fa-shopping-cart my-auto text-4xl pl-4 text-green-500 hover:text-red-500"></i>
+                    <i className="fas fa-shopping-cart my-auto text-4xl pl-4 text-gray-500 hover:text-red-500"></i>
                 </button>
                 <Modal
                     isOpen={cartOpen}
@@ -64,13 +59,13 @@ const Header = () => {
                     style={modalStyle}
                 >
                     <div className='flex justify-between'>
-                        <button className='px-10 py-3 my-auto text-white font-bold bg-green-500  hover:bg-red-500 rounded' onClick={handleCheckout}>Check Out</button>
-                        <button className='px-10 py-3 my-auto text-white font-bold bg-green-500  hover:bg-red-500 rounded' onClick={toggleCartModal}>Close</button>
+                        <h1 className="text-6xl my-auto font-bold text-gray-500">Rent Cart</h1>
+                        <button className='text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-16 py-2 text-center' onClick={toggleCartModal}>Close</button>
                     </div>
                     <Cart />
                 </Modal>
                 <button>
-                    <i className="fas fa-search my-auto text-3xl pl-4 text-green-500  hover:text-red-500"></i>
+                    <i className="fas fa-search my-auto text-3xl pl-4 text-gray-500  hover:text-red-500"></i>
                 </button>
             </div>
         </div>

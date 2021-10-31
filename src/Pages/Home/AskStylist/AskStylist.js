@@ -8,7 +8,7 @@ const AskStylist = () => {
             </div>
             <div className='md:w-1/2'>
                 <div className='my-16 py-5 md:px-20'>
-                    <p className='text-green-500 text-xl'>Ask A Stylist</p>
+                    <p className='text-gray-500 text-xl'>Ask A Stylist</p>
                     <h1 className='text-5xl font-semibold mt-4 leading-relaxed'>Great Look <br />With Our Stylist</h1>
                     <p className='text-xl mt-5 md:mt-10'>If you are confused about what to wear, Our stylist can help you pick one</p>
                     <div className='pt-5'>

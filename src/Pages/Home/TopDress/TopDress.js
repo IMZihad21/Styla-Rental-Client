@@ -23,7 +23,7 @@ const TopDress = () => {
         <div className='my-5'>
             <div className='md:flex justify-between'>
                 <div className='my-16 text-left pl-5 py-2'>
-                    <p className='text-green-500 text-xl'>For Any Occasion</p>
+                    <p className='text-gray-500 text-xl'>For Any Occasion</p>
                     <h1 className='text-5xl font-semibold mt-4'>Find Gorgeous Dresses <br /> For Any Occasion</h1>
                 </div>
                 <div>
