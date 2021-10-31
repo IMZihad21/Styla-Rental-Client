@@ -4,6 +4,7 @@ import axios from 'axios';
 import { RatingView } from 'react-simple-star-rating';
 import useProvider from '../../../Hooks/useProvider';
 import { toast } from 'react-toastify';
+import Loading from '../../Shared/Loading/Loading';
 
 const DressDetails = () => {
     const [ dress, setDress ] = useState({});
@@ -42,21 +43,26 @@ const DressDetails = () => {
         });
     };
     return (
-        <div className='p-4 flex'>
-            <div className='w-80 h-92 mx-auto'>
-                <img className='w-full h-full rounded-xl' src={dress.image} alt={dress.name} />
-            </div>
-            <div className='w-1/2 my-auto text-left'>
-                <h1 className='text-2xl my-2 font-semibold'>This amazing dress is named <span className='text-red-500 text-3xl font-bold'>{dress.name}</span></h1>
-                <p className='text-lg my-2'>Posted by <span className='text-gray-500 font-bold'>{
-                    user.displayName ?
-                        `${user.displayName} (${user.email})` :
-                        user.email
-                }</span></p>
-                <RatingView ratingValue={dress.rating} />
-                <p className='font-semibold'>Rent this Dress for <span className='font-bold text-red-500'>${dress.price}</span></p>
-                <button onClick={handleAddToCart} className='px-10 py-2 my-3 text-white font-bold bg-green-500 hover:bg-red-500 rounded-xl'>Rent this dress</button>
-            </div>
+        <div>
+            {
+                dress ? <div className='p-4 flex'>
+                    <div className='w-80 h-92 mx-auto'>
+                        <img className='w-full h-full rounded-xl' src={dress.image} alt={dress.name} />
+                    </div>
+                    <div className='w-1/2 my-auto text-left'>
+                        <h1 className='text-2xl my-2 font-semibold'>This amazing dress is named <span className='text-red-500 text-3xl font-bold'>{dress.name}</span></h1>
+                        <p className='text-lg my-2'>Posted by <span className='text-gray-500 font-bold'>{
+                            user.displayName ?
+                                `${user.displayName} (${user.email})` :
+                                user.email
+                        }</span></p>
+                        <RatingView ratingValue={dress.rating} />
+                        <p className='font-semibold'>Rent this Dress for <span className='font-bold text-red-500'>${dress.price}</span></p>
+                        <button onClick={handleAddToCart} className='px-10 py-2 my-3 text-white font-bold bg-green-500 hover:bg-red-500 rounded-xl'>Rent this dress</button>
+                    </div>
+                </div> :
+                    <Loading />
+            }
         </div>
     );
 };
