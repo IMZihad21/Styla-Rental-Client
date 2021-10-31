@@ -14,8 +14,14 @@ const useCart = () => {
                 if (cart) {
                     setCart(response.data.cart);
                 }
+                else {
+                    setCart([])
+                }
                 if (order) {
                     setOrder(response.data.order);
+                }
+                else {
+                    setOrder([]);
                 }
             })
     }, [ user ])

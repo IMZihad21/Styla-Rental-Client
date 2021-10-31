@@ -13,9 +13,7 @@ const DressDetails = () => {
         axios.get(`http://localhost:9000/dress/${dressID}`)
             .then((response) => {
                 setDress(response.data);
-            }).catch((err) => {
-                console.log(err)
-            });
+            })
     }, [])
 
     const handleAddToCart = () => {

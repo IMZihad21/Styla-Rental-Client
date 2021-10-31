@@ -21,13 +21,16 @@ const Cart = () => {
 
     };
     const onsubmit = (data) => {
-        const { name, email, address } = data;
+        const { client, clientEmail, address } = data;
         setInputError(false);
-        if (name === "" || email === "" || address === "") {
+        if (client === "" || clientEmail === "" || address === "") {
             setInputError(true);
             return;
         }
-        setOrder([ ...order, ...cart ]);
+        const pendingOrder = cart.map(dress => {
+            return { ...dress, ...data }
+        })
+        setOrder([ ...order, ...pendingOrder ]);
 
         toast.success("Checkout has been completed. Please wait for approval", {
             position: "top-right",
@@ -83,12 +86,12 @@ const Cart = () => {
                             </div>
                             <form className="mt-5" onSubmit={handleSubmit(onsubmit)}>
                                 <div className="mb-6 text-left">
-                                    <label htmlFor="name" className="text-lg font-medium text-gray--900 block mb-2">Your Name </label>
-                                    <input  {...register("name")} type="text" id="name" className="bg-green--50 border border-green--300 text-gray--900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5" required="" />
+                                    <label htmlFor="client" className="text-lg font-medium text-gray--900 block mb-2">Your Name </label>
+                                    <input defaultValue={user.displayName} {...register("client")} type="text" id="client" className="bg-green--50 border border-green--300 text-gray--900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5" required="" />
                                 </div>
                                 <div className="mb-6 text-left">
-                                    <label htmlFor="email" className="text-lg font-medium text-gray--900 block mb-2">Your Email </label>
-                                    <input  {...register("email")} type="email" id="email" className="bg-green--50 border border-green--300 text-gray--900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5" required="" />
+                                    <label htmlFor="clientEmail" className="text-lg font-medium text-gray--900 block mb-2">Your Email </label>
+                                    <input defaultValue={user.email} {...register("clientEmail")} type="email" id="clientEmail" className="bg-green--50 border border-green--300 text-gray--900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5" required="" />
                                 </div>
                                 <div className="mb-6 text-left">
                                     <label htmlFor="address" className="text-lg font-medium text-gray--900 block mb-2">Your Address </label>
