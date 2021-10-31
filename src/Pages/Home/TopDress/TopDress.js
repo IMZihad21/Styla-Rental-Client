@@ -12,11 +12,8 @@ const TopDress = () => {
         axios.get('https://styla-rental.herokuapp.com/dresses')
             .then((response) => {
                 const data = response.data;
-                if (data.length > 6) {
-                    const slicedData = data.slice(0, 6);
-                    setDresses(slicedData);
-                }
-                setDresses(data);
+                const slicedData = data.slice(0, 6);
+                setDresses(slicedData);
             })
     }, [])
     return (
