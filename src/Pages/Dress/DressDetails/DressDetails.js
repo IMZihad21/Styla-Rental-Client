@@ -10,7 +10,7 @@ const DressDetails = () => {
     const { dressID } = useParams();
     const { user, cart, setCart } = useProvider();
     useEffect(() => {
-        axios.get(`http://localhost:9000/dress/${dressID}`)
+        axios.get(`https://styla-rental.herokuapp.com/dress/${dressID}`)
             .then((response) => {
                 setDress(response.data);
             })

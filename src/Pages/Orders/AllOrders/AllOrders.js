@@ -5,7 +5,7 @@ import Loading from '../../Shared/Loading/Loading';
 const AllOrders = () => {
     const [ orders, setOrders ] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:9000/cart/all')
+        axios.get('https://styla-rental.herokuapp.com/cart/all')
             .then(({ data }) => {
                 setOrders([ ...new Set([].concat(...data.map((o) => o.order))) ])
             })

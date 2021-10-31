@@ -24,7 +24,7 @@ const RentDress = () => {
         data.rating = parseInt(rating);
 
         // Make POST req to backend
-        axios.post('http://localhost:9000/dresses', data)
+        axios.post('https://styla-rental.herokuapp.com/dresses', data)
             .then((response) => {
                 if (response.data?.acknowledged) {
                     toast.success("Succesfully added your dress to our collection. Thanks for using our service", {

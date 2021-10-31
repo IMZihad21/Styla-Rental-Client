@@ -8,7 +8,7 @@ const useCart = () => {
     const [ cart, setCart ] = useState([]);
     const [ order, setOrder ] = useState([]);
     useEffect(() => {
-        axios.get(`http://localhost:9000/cart/${userID}`)
+        axios.get(`https://styla-rental.herokuapp.com/cart/${userID}`)
             .then((response) => {
                 const { cart, order } = response.data;
                 if (cart) {
@@ -29,7 +29,7 @@ const useCart = () => {
     useEffect(() => {
         if (userID) {
             const data = { userID, cart, order }
-            axios.put('http://localhost:9000/cart', data)
+            axios.put('https://styla-rental.herokuapp.com/cart', data)
                 .then((response) => {
                     // do nothing cuz yes XD
                 })

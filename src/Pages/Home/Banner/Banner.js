@@ -7,7 +7,7 @@ import Loading from '../../Shared/Loading/Loading';
 const Banner = () => {
     const [ banner, setBanner ] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:9000/banner')
+        axios.get('https://styla-rental.herokuapp.com/banner')
             .then(response => {
                 setBanner(response.data)
             })
