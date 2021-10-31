@@ -4,7 +4,7 @@ import useProvider from '../../../../Hooks/useProvider';
 import { ToastContainer, toast } from 'react-toastify';
 
 const Cart = () => {
-    const { user, cart, setCart } = useProvider();
+    const { user, cart, order, setCart, setOrder } = useProvider();
     const { register, handleSubmit, reset } = useForm();
     const [ inputError, setInputError ] = useState(false);
     let totalRent = 0;
@@ -27,6 +27,8 @@ const Cart = () => {
             setInputError(true);
             return;
         }
+        setOrder([ ...order, ...cart ]);
+
         toast.success("Checkout has been completed. Please wait for approval", {
             position: "top-right",
             autoClose: 5000,
@@ -53,7 +55,7 @@ const Cart = () => {
                                 <p className='my-auto'>Remove from Cart</p>
                             </div>
                             {
-                                cart.map(dress => <div className='flex justify-between bg-gray-50 rounded px-4 m-1'>
+                                cart.map(dress => <div key={dress.image} className='flex justify-between bg-gray-50 rounded px-4 m-1'>
                                     <div className='w-16 h-16'>
                                         <img className='w-full h-full rounded' src={dress.image} alt={dress.name} />
                                     </div>

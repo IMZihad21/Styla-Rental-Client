@@ -11,6 +11,7 @@ const Navbar = () => {
                     <NavLink className="mx-4 hover:text-red-500" activeClassName='text-gray-400' exact to='/'>Home</NavLink>
                     <NavLink className="mx-4 hover:text-red-500" activeClassName='text-gray-400' to='/dress/rent'>Rent A Dress</NavLink>
                     <NavLink className="mx-4 hover:text-red-500" activeClassName='text-gray-400' to='/dress/find'>Find A Dress</NavLink>
+                    <NavLink className="mx-4 hover:text-red-500" activeClassName='text-gray-400' to='/orders'>Your Orders</NavLink>
                     <NavLink className="mx-4 hover:text-red-500" activeClassName='text-gray-400' to='/orders/all'>Watch All Orders</NavLink>
                 </div>
             }

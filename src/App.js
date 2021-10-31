@@ -12,6 +12,7 @@ import Header from './Pages/Shared/Header/Header/Header';
 import Navbar from './Pages/Shared/Header/Navbar/Navbar';
 import PrivateRoute from './Utilities/PrivateRoute/PrivateRoute';
 import DressDetails from './Pages/Dress/DressDetails/DressDetails';
+import Orders from './Pages/Orders/Orders/Orders';
 
 function App() {
   return (
@@ -20,18 +21,21 @@ function App() {
         <Header />
         <Navbar />
         <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/authorization" component={Authorization} />
-          <PrivateRoute path="/dress/rent">
+          <Route exact path="/" component={Home} />
+          <Route exact path="/authorization" component={Authorization} />
+          <PrivateRoute exact path="/dress/rent">
             <RentDress />
           </PrivateRoute>
-          <PrivateRoute path="/dress/find">
+          <PrivateRoute exact path="/dress/find">
             <FindDress />
           </PrivateRoute>
           <PrivateRoute path="/dress/:dressID">
             <DressDetails />
           </PrivateRoute>
-          <PrivateRoute path="/orders/all">
+          <PrivateRoute exact path="/orders">
+            <Orders />
+          </PrivateRoute>
+          <PrivateRoute exact path="/orders/all">
             <AllOrders />
           </PrivateRoute>
           <Route path="*" component={NotFound} />
