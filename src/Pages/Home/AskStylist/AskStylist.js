@@ -12,8 +12,8 @@ const AskStylist = () => {
                     <h1 className='text-5xl font-semibold mt-4 leading-relaxed'>Great Look <br />With Our Stylist</h1>
                     <p className='text-xl mt-5 md:mt-10'>If you are confused about what to wear, Our stylist can help you pick one</p>
                     <div className='pt-5'>
-                        <input className='p-5' type="email" name="" id="" placeholder="Your E-mail" />
-                        <button className='p-5 bg-green-500 text-white font-bold'>Contact Stylists</button>
+                        <input className='p-5 w-1/2' type="email" name="" id="" placeholder="Your E-mail" />
+                        <button className='p-5 w-1/2 bg-green-500 text-white font-bold'>Contact Stylists</button>
                     </div>
                 </div>
             </div>

@@ -15,7 +15,7 @@ const Orders = () => {
             {
                 order ?
                     order.map(dress => <div key={Math.random()} className='flex justify-between bg-gray-50 rounded px-4 m-1'>
-                        <div className='w-16 h-16'>
+                        <div className='hidden md:block w-16 h-16'>
                             <img className='w-full h-full rounded' src={dress.image} alt={dress.name} />
                         </div>
                         <h1 className='w-2/6 text-2xl font-bold my-auto'>{dress.name}</h1>

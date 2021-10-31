@@ -9,7 +9,7 @@ const GetInTouch = () => {
                     <p className='text-gray-500 text-xl'>Our Contacts</p>
                     <h1 className='text-5xl font-semibold'>Get In Touch With Us</h1>
                 </div>
-                <div className='grid grid-cols-2 gap-4 p-2 text-center'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-2 text-center'>
                     <div className='bg-green-100 rounded-xl p-2'>
                         <i className="text-gray-500 text-2xl p-3 fas fa-search-location"></i>
                         <h1 className='text-md font-bold'>KA-244, Kuril, Progoti Shoroni, Dhaka</h1>

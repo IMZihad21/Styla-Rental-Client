@@ -25,11 +25,11 @@ const TopDress = () => {
                 </div>
                 <div>
                     <Link to='/dress/find'>
-                        <button className='bg-green-500 text-2xl text-white my-16 px-10 py-5 rounded-xl'>View All Dresses</button>
+                        <button className='bg-green-500 text-2xl text-white md:mt-16 my-4 px-10 py-3 rounded-xl'>View All Dresses <i className="fas fa-arrow-right"></i></button>
                     </Link>
                 </div>
             </div>
-            <div className='grid grid-cols-3 gap-5'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-5'>
                 {
                     dresses.length > 0 ?
                         dresses.map(dress => <DressCard key={dress._id} dress={dress} />) :

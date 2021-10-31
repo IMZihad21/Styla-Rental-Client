@@ -37,7 +37,7 @@ const DressCard = ({ dress }) => {
 
     return (
         <div className='bg-gray-100 rounded-xl p-4'>
-            <div className='w-60 h-80 mx-auto'>
+            <div className='md:w-60 w-80 h-96 md:h-80 mx-auto'>
                 <img className='w-full h-full rounded-xl' src={image} alt={name} />
             </div>
             <div>

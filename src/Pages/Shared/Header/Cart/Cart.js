@@ -51,15 +51,15 @@ const Cart = () => {
                     <p className='text-2xl mt-20 pb-5 font-semibold'>Cart Empty :( <br /> Check out our awesome collections and add to cart!</p> :
                     <div className='md:flex mt-5'>
                         <div className='md:w-4/6'>
-                            <div className='flex text-gray-500 text-lg bg-gray-50 justify-between rounded px-4 m-1'>
-                                <h1 className='my-auto w-16'>Product</h1>
+                            <div className='flex text-gray-500 text-lg bg-gray-50 justify-between rounded md:px-4 m-1'>
+                                <h1 className='hidden md:block my-auto w-16'>Product</h1>
                                 <h1 className='w-2/6 my-auto'>Dress Name</h1>
                                 <p className='w-2/6 my-auto'>Rent Price</p>
-                                <p className='my-auto'>Remove from Cart</p>
+                                <p className='my-auto'>Remove</p>
                             </div>
                             {
-                                cart.map(dress => <div key={dress.image} className='flex justify-between bg-gray-50 rounded px-4 m-1'>
-                                    <div className='w-16 h-16'>
+                                cart.map(dress => <div key={dress.image} className='flex justify-between bg-gray-50 rounded md:px-4 m-1'>
+                                    <div className='hidden md:block w-16 h-16'>
                                         <img className='w-full h-full rounded' src={dress.image} alt={dress.name} />
                                     </div>
                                     <h1 className='w-2/6 text-2xl font-bold my-auto'>{dress.name}</h1>
@@ -68,7 +68,7 @@ const Cart = () => {
                                 </div>)
                             }
                         </div>
-                        <div className='md:w-2/6'>
+                        <div className='md:w-2/6 mt-8 md:mt-0'>
                             <div className=' divide-y-2  divide-gray-400 border-2 border-gray-400 rounded '>
                                 <h1 className='text-gray-500 text-lg bg-gray-50 justify-between rounded px-4 m-1'>Checkout</h1>
                                 <div className='flex justify-between px-10 text-lg'>
@@ -100,7 +100,7 @@ const Cart = () => {
                                 {
                                     inputError && <p className="my-5 text-red-500 text-xl font-semibold">* All field must be filled before Submit</p>
                                 }
-                                <button type="submit" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Checkout</button>
+                                <button type="submit" className="text-white bg-green-700 hover:bg-red-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Checkout</button>
                             </form>
                         </div>
                     </div>
