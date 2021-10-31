@@ -32,7 +32,7 @@ const TopDress = () => {
                     </Link>
                 </div>
             </div>
-            <div className='grid grid-cols-4 gap-4'>
+            <div className='grid grid-cols-3 gap-5'>
                 {
                     dresses.length > 0 ?
                         dresses.map(dress => <DressCard key={dress._id} dress={dress} />) :
