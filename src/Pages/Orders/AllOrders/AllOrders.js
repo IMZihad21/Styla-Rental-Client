@@ -5,7 +5,7 @@ import Loading from '../../Shared/Loading/Loading';
 const AllOrders = () => {
     const [ order, setOrder ] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:9000/cart/all')
+        axios.get('https://styla-rental.herokuapp.com/cart/all')
             .then(({ data }) => {
                 setOrder([ ...new Set([].concat(...data.map((o) => o.order))) ])
             })
@@ -13,7 +13,7 @@ const AllOrders = () => {
     const handleRemoveFromCart = ({ clientEmail, _id }) => {
         const data = { userID: clientEmail, productID: _id };
         if (window.confirm("Do you really want to remove this?")) {
-            axios.put('http://localhost:9000/order', data)
+            axios.put('https://styla-rental.herokuapp.com/order', data)
                 .then(({ data }) => {
                     const updatedOrder = order.filter(element => element._id !== _id);
                     setOrder(updatedOrder);
@@ -24,7 +24,7 @@ const AllOrders = () => {
     const handleAuthorizeDelivery = ({ clientEmail, _id }) => {
         const data = { userID: clientEmail, _id };
         if (window.confirm("Do you want to authorize this delivery?")) {
-            axios.put('http://localhost:9000/order/authorize', data)
+            axios.put('https://styla-rental.herokuapp.com/order/authorize', data)
                 .then(({ data }) => {
                     const updatedOrder = order.map(obj =>
                         obj._id === _id ? { ...obj, pending: false } : obj
