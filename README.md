@@ -1,5 +1,5 @@
 # Styla Rental
-Live Website link [https://stylarental.web.app](https://stylarental.web.app)
+Live Website link [https://stylarental-ed2eb.web.app](https://stylarental-ed2eb.web.app)
 
 
 ### Custom Deploy command
