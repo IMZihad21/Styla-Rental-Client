@@ -17,7 +17,7 @@ import Orders from './Pages/Orders/Orders/Orders';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/stylaRental">
         <Header />
         <Navbar />
         <Switch>
