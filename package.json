@@ -2,7 +2,7 @@
   "name": "dress-rental-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/stylaRental",
+  "homepage": "/Styla-Rental-Client",
   "dependencies": {
     "@craco/craco": "^6.4.0",
     "@testing-library/jest-dom": "^5.14.1",
@@ -31,9 +31,16 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": ["react-app", "react-app/jest"]
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "browserslist": [">0.2%", "not dead", "not op_mini all"],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "autoprefixer": "^9.8.8",
     "postcss": "^7.0.39",
