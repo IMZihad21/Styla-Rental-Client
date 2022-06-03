@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Styla-Rental-Client/static/css/main.8acc1f31.chunk.css",
+    "main.js": "/Styla-Rental-Client/static/js/main.f51a5912.chunk.js",
+    "main.js.map": "/Styla-Rental-Client/static/js/main.f51a5912.chunk.js.map",
+    "runtime-main.js": "/Styla-Rental-Client/static/js/runtime-main.f49a095b.js",
+    "runtime-main.js.map": "/Styla-Rental-Client/static/js/runtime-main.f49a095b.js.map",
+    "static/css/2.ce85d95a.chunk.css": "/Styla-Rental-Client/static/css/2.ce85d95a.chunk.css",
+    "static/js/2.c7b6a3bb.chunk.js": "/Styla-Rental-Client/static/js/2.c7b6a3bb.chunk.js",
+    "static/js/2.c7b6a3bb.chunk.js.map": "/Styla-Rental-Client/static/js/2.c7b6a3bb.chunk.js.map",
+    "static/js/3.a277b849.chunk.js": "/Styla-Rental-Client/static/js/3.a277b849.chunk.js",
+    "static/js/3.a277b849.chunk.js.map": "/Styla-Rental-Client/static/js/3.a277b849.chunk.js.map",
+    "index.html": "/Styla-Rental-Client/index.html",
+    "static/css/2.ce85d95a.chunk.css.map": "/Styla-Rental-Client/static/css/2.ce85d95a.chunk.css.map",
+    "static/css/main.8acc1f31.chunk.css.map": "/Styla-Rental-Client/static/css/main.8acc1f31.chunk.css.map",
+    "static/js/2.c7b6a3bb.chunk.js.LICENSE.txt": "/Styla-Rental-Client/static/js/2.c7b6a3bb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f49a095b.js",
+    "static/css/2.ce85d95a.chunk.css",
+    "static/js/2.c7b6a3bb.chunk.js",
+    "static/css/main.8acc1f31.chunk.css",
+    "static/js/main.f51a5912.chunk.js"
+  ]
+}
