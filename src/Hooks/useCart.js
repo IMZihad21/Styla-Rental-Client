@@ -24,7 +24,7 @@ const useCart = () => {
                     setOrder([]);
                 }
             })
-    }, [ user ])
+    }, [ userID ])
 
     useEffect(() => {
         if (userID) {
@@ -34,7 +34,7 @@ const useCart = () => {
                     // do nothing cuz yes XD
                 })
         }
-    }, [ cart, order ])
+    }, [ cart, order, userID ])
 
     return {
         cart,

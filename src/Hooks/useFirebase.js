@@ -9,9 +9,12 @@ const useFirebase = () => {
     const [ loading, setLoading ] = useState(true)
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
-    const signInUsingGoogle = () => {
-        return signInWithPopup(auth, googleProvider)
-            .finally(() => { setLoading(false) });
+    const signInUsingGoogle = async () => {
+        try {
+            return await signInWithPopup(auth, googleProvider);
+        } finally {
+            setLoading(false);
+        }
     }
 
     const logOut = () => {
@@ -35,7 +38,7 @@ const useFirebase = () => {
             setLoading(false);
         });
         return () => unsubscribe;
-    }, [])
+    }, [ auth ])
 
     return {
         user,

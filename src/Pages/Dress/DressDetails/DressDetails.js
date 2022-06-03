@@ -15,7 +15,7 @@ const DressDetails = () => {
             .then((response) => {
                 setDress(response.data);
             })
-    }, [])
+    }, [ dressID ])
 
     const handleAddToCart = () => {
         const match = cart.find(element => element.image === dress.image);
